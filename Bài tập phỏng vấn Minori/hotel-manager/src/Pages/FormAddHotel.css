@@ -1,0 +1,14 @@
+.FormCreatHotel input {
+  float: right;
+  width: 75%;
+  border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.FormCreatHotel small {
+  float: right;
+  color: red;
+}
+.FormCreatHotel small::before {
+  display: inline;
+  content: "⚠ ";
+}

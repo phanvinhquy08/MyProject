@@ -1,0 +1,19 @@
+.FormEdit {
+    position: relative;
+}
+.FormEdit input {
+  float: right;
+  width: 75%;
+  border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.FormEdit small {
+  position: absolute;
+  right: 0;
+
+  color: red;
+}
+.FormEdit small::before {
+  display: inline;
+  content: "⚠ ";
+}

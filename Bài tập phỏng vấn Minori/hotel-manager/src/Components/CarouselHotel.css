@@ -1,0 +1,6 @@
+.carousel-item img {
+    width: 600px;
+}
+.carousel-caption p {
+    display: none;
+}
