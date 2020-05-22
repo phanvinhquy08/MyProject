@@ -1,0 +1,35 @@
+extends ../layout/common
+block content  
+  h2 TRANSACTIONS
+  a(href="/transactions/add" class="btn btn-primary") Add new transaction
+  nav(aria-label='Page navigation example')
+  ul.pagination
+    li.page-item
+      a.page-link(href='#', aria-label='Previous')
+        span(aria-hidden='true') &laquo;
+    li.page-item
+      a.page-link(href='?page=1') 1
+    li.page-item
+      a.page-link(href='?page=2') 2
+    li.page-item
+      a.page-link(href='?page=3') 3
+    li.page-item
+      a.page-link(href='#', aria-label='Next')
+        span(aria-hidden='true') &raquo;
+  table(class="table")
+    thead
+      tr
+        th ID
+        th Name
+        th Book
+        th Status
+        th Action
+    tbody
+      each transaction in transactions
+        tr
+          td=transaction.stt
+          td=transaction.user
+          td=transaction.book
+          td=transaction.isComplete
+          td
+            a(href="/transactions/" + transaction.id +"/complete") Trả sách

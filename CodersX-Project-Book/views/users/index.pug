@@ -1,0 +1,18 @@
+extends ../layout/common
+block content  
+  h2 LIST OF BOOK 
+  a(href="/users/add" class="btn btn-primary") Add new user
+  table(class="table")
+    thead
+      tr
+        th Name
+        th Email
+        th  Action
+    tbody
+      each user in users
+        tr
+          td=user.name
+          td=user.email
+          td
+            a(href="/users/edit/" + user.id) Edit
+            a(href="/users/delete/" + user.id) Delete
