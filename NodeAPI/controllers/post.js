@@ -1,5 +1,7 @@
 const { validationResult } = require("express-validator");
 const Post = require("../models/post");
+
+
 module.exports.getPost = (req, res) => {
     const post = Post.find()
         .select("_id title body ")
