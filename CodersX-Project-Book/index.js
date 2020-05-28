@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
 const app = express();
-const port = process.env.PORT || 8001
+const port = process.env.PORT || 8000
 
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, dbName: "CodersX-Project-Book-Manager" }).then(() => console.log("DB connected"))
 mongoose.connection.on("error", err => console.log("DB connection error" + err.message))
