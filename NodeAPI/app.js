@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require("cookie-parser");
 
 // db
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, dbName: "CodersX-Project-book" }).then(() => console.log("DB connected"))
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, dbName: "test" }).then(() => console.log("DB connected"))
 mongoose.connection.on("error", err => console.log("DB connection error" + err.message))
 const app = express();
 // bring router

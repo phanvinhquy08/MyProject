@@ -14,8 +14,11 @@ const booksRouter = require("./routes/books.router");
 const userRouter = require("./routes/users.router");
 const transactionRouter = require("./routes/transactions.router");
 const authRouter = require("./routes/auth.router");
+// API
 const apiTransactionRouter = require("./api/routes/api.transactions.router");
-const apiLoginRouter = require("./api/routes/api.login.router")
+const apiLoginRouter = require("./api/routes/api.login.router");
+const apiBook = require("./api/routes/api.books.router");
+const apiUser = require("./api/routes/api.users.router");
 
 app.set('views', './views');
 app.set('view engine', 'pug');
@@ -31,6 +34,8 @@ app.use("/auth", authRouter);
 
 app.use("/api", apiTransactionRouter)
 app.use("/api", apiLoginRouter)
+app.use("/api", apiBook)
+app.use("/api", apiUser)
 
 app.get("/", (req, res) => {
     res.render("index")

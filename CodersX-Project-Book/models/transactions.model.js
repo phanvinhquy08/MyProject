@@ -1,8 +1,15 @@
 const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema.Types;
 
 const transactionSchema = mongoose.Schema({
-    book: String,
-    user: String,
+    user: {
+        type: ObjectId,
+        ref: "user"
+    },
+    book: {
+        type: ObjectId,
+        ref: "book"
+    },
     isComplete: Boolean
 })
 

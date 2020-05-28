@@ -11,7 +11,6 @@ module.exports.postLogin = async (req, res) => {
         if (userExist) {
             bcrypt.compare(password, userExist.password, function (err, result) {
                 if (result) {
-                    console.log(result)
                     const token = jwt.sign({ _id: userExist.id }, process.env.JWT_SECRET);
                     res.cookie("token", token);
                     res.status(200).json({
